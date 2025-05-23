@@ -14,6 +14,25 @@
       background-color: #f8fafc;
       color: #333;
     }
+
+<header>
+  <h1 style="text-align:center; margin: 1rem 0;">Suma Shamanna for Re-Election</h1>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Suma Shamanna</div>
+      <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#accomplishments">Accomplishments</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#endorsements">Endorsements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    
     header {
       background-color: #004080;
       color: white;
@@ -72,6 +91,85 @@
 .accomplishments-grid > div {
   flex: 1;
   min-width: 300px;
+}
+
+/* Basic Reset */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #004080;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger menu icon */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #004080;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
     .endorser-img {
@@ -475,6 +573,15 @@ Democrats Abroad NCC Asia Pacific </strong>
 <footer>
   &copy; 2025 Suma Shamanna
 </footer>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
