@@ -4,18 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Suma Shamanna for Re-Election</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Lato', sans-serif;
       margin: 0;
-      background-color: #f4f7fa;
+      background-color: #f8fafc;
       color: #333;
     }
     header {
-      background-color: #00274d;
+      background: url('https://source.unsplash.com/1600x400/?vote,community') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+    header p {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
     }
     nav {
       background-color: #004080;
@@ -31,15 +48,26 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
+      color: #004080;
+      margin-bottom: 1rem;
     }
-    .endorsements blockquote {
-      margin: 1rem 0;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    blockquote {
+      margin: 0;
       padding: 1rem;
       background-color: #e9f0fb;
       border-left: 4px solid #0077cc;
@@ -60,13 +88,18 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Suma Shamanna</h1>
-  <p>Re-Election for Asia-Pacific Regional Vice Chair<br>Democrats Abroad</p>
+  <p>Re-Election for Asia-Pacific Regional Vice Chair – Democrats Abroad</p>
 </header>
 
 <nav>
@@ -80,49 +113,68 @@
 <section id="about">
   <h2>About Suma</h2>
   <p>
-    My name is Suma Shamanna, a proud Oregonian living in Bangalore, India. I’ve been driven by a commitment to empower communities through compassion, inclusivity, and purposeful action.
-    From grassroots activism in Oregon to global leadership with Democrats Abroad, I now serve as your Asia-Pacific Regional Vice Chair and Chief Information Security Officer. I believe in teamwork, mentorship, and using technology to deliver real results.
+    I’m Suma Shamanna, an Oregonian living in Bangalore, India. My leadership journey began in Oregon with Congressman David Wu and has grown through grassroots activism, global engagement, and digital innovation. As your Asia-Pacific Regional Vice Chair and Chief Information Security Officer for Democrats Abroad, I lead with compassion, measurable impact, and inclusivity.
   </p>
 </section>
 
 <section id="accomplishments">
   <h2>Accomplishments</h2>
-  <ul>
-    <li><strong>Regional Collaboration:</strong> Transformed monthly calls into action sessions; built cross-border partnerships.</li>
-    <li><strong>Leadership Development:</strong> Launched mentorships, supported new committees, and empowered emerging leaders.</li>
-    <li><strong>Digital Innovation:</strong> Streamlined admin processes, implemented data-driven tools.</li>
-    <li><strong>High-Impact Initiatives:</strong> Led digital outreach, Zoom voter helpdesk, and Monthly Resistance Action Hours.</li>
-  </ul>
+  <div class="cards">
+    <div class="card">
+      <h3>Regional Collaboration</h3>
+      <p>Transformed monthly calls into strategic action sessions and built cross-border partnerships.</p>
+    </div>
+    <div class="card">
+      <h3>Leadership Development</h3>
+      <p>Launched mentorships, empowered new leaders, and brought committees into compliance.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Innovation</h3>
+      <p>Streamlined operations with tech tools and data-driven decision making.</p>
+    </div>
+    <div class="card">
+      <h3>Outreach Initiatives</h3>
+      <p>Led phonebanking, Zoom helpdesks, swing-state campaigns, and resistance action hours.</p>
+    </div>
+  </div>
 </section>
 
 <section id="vision">
   <h2>Vision for 2025–2027</h2>
-  <ul>
-    <li>Unify and amplify regional strengths through mentorship and tech tools.</li>
-    <li>Automate repetitive tasks to boost outreach capacity.</li>
-    <li>Champion inclusive growth and flexible volunteerism.</li>
-    <li>Engage Americans in non-committee countries.</li>
-    <li>Grow youth involvement through internships and mentorships.</li>
-    <li>Lead with transparency and open communication.</li>
-  </ul>
+  <div class="cards">
+    <div class="card"><strong>Unify Strengths:</strong> Tailored resources and mentoring for each committee.</div>
+    <div class="card"><strong>Streamline Operations:</strong> Automate repetitive tasks to focus on voters.</div>
+    <div class="card"><strong>Champion Inclusion:</strong> Engage flexible, cross-committee volunteers.</div>
+    <div class="card"><strong>Expand NCC Engagement:</strong> Support Americans in unrepresented countries.</div>
+    <div class="card"><strong>Youth Participation:</strong> Internships, mentorships, study abroad ties.</div>
+    <div class="card"><strong>Collaborative Leadership:</strong> Transparent, communicative, inclusive approach.</div>
+  </div>
 </section>
 
-<section id="endorsements" class="endorsements">
+<section id="endorsements">
   <h2>Endorsements</h2>
-  <blockquote>“Suma’s leadership has unified our region and inspired new volunteers to step up.”<br>— DA India Volunteer</blockquote>
-  <blockquote>“She blends tech savvy with heartfelt community building.”<br>— AP Region Chair</blockquote>
-  <blockquote>“From Oregon to Asia-Pacific, Suma’s dedication is unmatched.”<br>— Former Campaign Colleague</blockquote>
+  <div class="cards">
+    <div class="card">
+      <blockquote>“Suma’s leadership has unified our region and inspired new volunteers to step up.”<br>— DA India Volunteer</blockquote>
+    </div>
+    <div class="card">
+      <blockquote>“She blends tech savvy with heartfelt community building.”<br>— AP Region Chair</blockquote>
+    </div>
+    <div class="card">
+      <blockquote>“From Oregon to Asia-Pacific, Suma’s dedication is unmatched.”<br>— Former Campaign Colleague</blockquote>
+    </div>
+  </div>
   <a href="mailto:suma.s.gururaj@gmail.com?subject=Endorsement for Suma" class="button">Add Your Endorsement</a>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Have questions or ideas? I’d love to hear from you.</p>
+  <p>I’m eager to hear your feedback, ideas, and hopes for our community.</p>
   <p>Email: <a href="mailto:suma.s.gururaj@gmail.com">suma.s.gururaj@gmail.com</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Suma Shamanna </p>
+  <p>© 2025 Suma Shamanna</p>
 </footer>
 
 </body>
