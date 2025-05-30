@@ -15,6 +15,75 @@
       color: #333;
     }
 
+    /* Basic Navbar Styling */
+.navbar {
+  background-color: #003366;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  #toggle-menu:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+}
+
     
     header {
       background-color: #004080;
@@ -205,15 +274,22 @@ blockquote {
   </style>
 </head>
 
-<nav style="background-color: #003366; padding: 1em; position: sticky; top: 0; z-index: 1000;">
-  <ul style="display: flex; list-style: none; justify-content: center; margin: 0; padding: 0;">
-    <li style="margin: 0 15px;"><a href="#about" style="color: white; text-decoration: none;">About</a></li>
-    <li style="margin: 0 15px;"><a href="#accomplishments" style="color: white; text-decoration: none;">Accomplishments</a></li>
-    <li style="margin: 0 15px;"><a href="#vision" style="color: white; text-decoration: none;">Vision</a></li>
-    <li style="margin: 0 15px;"><a href="#endorsements" style="color: white; text-decoration: none;">Endorsements</a></li>
-    <li style="margin: 0 15px;"><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
-  </ul>
+<!-- Responsive Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <span class="navbar-logo">Suma Shamanna</span>
+    <input type="checkbox" id="toggle-menu" />
+    <label for="toggle-menu" class="menu-icon">&#9776;</label>
+    <ul class="navbar-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#accomplishments">Accomplishments</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#endorsements">Endorsements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
+
 
   
 <body>
